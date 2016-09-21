@@ -1,0 +1,130 @@
+/*
+   color swatch
+
+
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+input[type="button"] {
+  cursor: pointer
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+body > nav {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  padding: 0.5em;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  background-color: rgba(100, 100, 100, 0.5);
+}
+body > nav a {
+  color: white;
+}
+body > header {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid gray;
+  padding: 1em 0;
+}
+body > header a {
+  color: gray;
+  flex: 1;
+}
+body > header nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 2;
+}
+body > header nav form {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid LightGray;
+}
+body > header nav input[name="search-input"] {
+  padding: 5px;
+}
+body > header nav input[name="search"] {
+  color: white;
+  background-color: gray;
+  width: 150px;
+  border: none;
+}
+body > header nav li {
+  display: inline;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  background-color: LightGray;
+  padding-bottom: 1em;
+}
+#products {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#products article {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid gray;
+  width: 200px;
+}
+#products article {
+  color: gray;
+}
+#products strong {
+  color: red;
+}
+#products article s {
+  font-size: smaller;
+}
+#products article input[name="add-to-cart"] {
+  background-color: orange;
+  border-radius: 3px;
+  box-shadow: inset 1px solid white;
+  border: 1px solid orange;
+  color: white;
+  text-shadow: 2px 0 1px gray;
+  padding: 1em 0;
+  width: 150px;
+  align-self: center;
+  font-weight: bold;
+}
+main input[name="view-more"] {
+  background-color: gray;
+  border-radius: 3px;
+  box-shadow: inset 0 0 white;
+  border: 1px solid gray;
+  color: white;
+  text-shadow: 2px 0 1px gray;
+  padding: 1em 0;
+  width: 150px;
+  font-weight: bold;
+}
+
+main section:last-of-type {
+  padding: 0 60px;
+}
+
+body > footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid gray;
+  padding: 1em 0;
+}
