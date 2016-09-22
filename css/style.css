@@ -53,7 +53,7 @@ body > nav {
   padding: 0.5em;
   border-bottom-left-radius: 3px;
   border-top-left-radius: 3px;
-  background-color: #5f6c76;
+  background-color: rgba(95, 108, 118, 0.8);
 }
 body > nav a {
   color: white;
@@ -96,12 +96,33 @@ body > header form input[name="search"] {
   width: 150px;
   border: none;
 }
-body > header nav li > ul {
+body > header #menu + ul {
   display: none;
+  position: absolute;
+  top: 8vw;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: #5f6c76;
+  padding: 4vw 0;
+  text-align: center;
+}
+body > header #menu:focus {
+  color: #f57b20;
+}
+body > header #menu:focus + ul {
+  display: block;
+}
+body > header #menu + ul li {
+  padding: 0 40px;
+  display: inline-block;
+}
+body > header #menu + ul li a {
+  color: white;
 }
 body > header nav li {
   display: inline;
-  padding-left: 1em;
+  padding-left: 2em;
 }
 
 main {
@@ -119,10 +140,17 @@ main {
   display: flex;
   flex-direction: column;
   margin: 60px;
-  padding: 10px;
+  padding: 15px;
   background-color: white;
   border: 1px solid #ddd;
   width: 258px;
+}
+#products article > * {
+  margin-bottom: 15px;
+}
+#products article span {
+  display: flex;
+  flex-direction: column;
 }
 #products strong {
   color: #c80000;
@@ -130,15 +158,20 @@ main {
 #products article s {
   font-size: smaller;
 }
+#products figure {
+  display: flex;
+  flex-direction: column;
+}
 #products figure img {
   width: 75%;
+  align-self: center;
 }
 #products article input[name="add-to-cart"] {
   border-radius: 3px;
-  box-shadow: inset 1px solid white;
-  border: 1px solid orange;
+  box-shadow: inset 0px 0px 3px #ffd3b2;
+  border: 1px solid #d55b00;
   color: white;
-  text-shadow: 2px 0 1px gray;
+  text-shadow: 0px 1px 2px #424242;
   padding: 1em 0;
   width: 150px;
   align-self: center;
@@ -148,12 +181,14 @@ main {
   background: linear-gradient(to bottom, #f66a02, #f57b20);
 }
 main input[name="view-more"] {
-  background-color: #5f6c76;
+  background: #80919f;
+  background: -webkit-linear-gradient(to bottom, #80919f, #616f79);
+  background: linear-gradient(to bottom, #80919f, #616f79);
   border-radius: 3px;
-  box-shadow: inset 0 0 white;
-  border: 1px solid gray;
+  box-shadow: inset 0px 0px 3px #cbddea;
+  border: 1px solid #4d575f;
   color: white;
-  text-shadow: 2px 0 1px gray;
+  text-shadow: 0px 1px 2px #424242;
   padding: 1em 0;
   width: 150px;
   font-weight: bold;
