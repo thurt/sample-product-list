@@ -29,10 +29,21 @@
     f57b20
 
 */
-
+@media (max-width: 512px) {
+  #logo-wrapper {
+    height: 35px !important;
+    margin-right: 0 !important;
+  }
+  body > header > nav > ul > li {
+    padding: 0.4em !important;
+  }
+  .dropdown-menu:focus + ul {
+    top: calc(35px + 2em) !important;
+  }
+}
 @media (max-width: 768px) {
   body > header {
-    padding: 1vw 30px;
+    padding: 1em 30px;
   }
   #logo-wrapper {
     height: 55px;
@@ -40,9 +51,9 @@
   #search-wrapper {
     order: 2;
     width: 100%;
-    padding: 3vw 0;
+    padding-top: 1em;
     border-top: 1px solid #ddd;
-    margin-top: 3vw;
+    margin-top: 1em;
   }
   #search {
     width: 100%;
@@ -56,7 +67,7 @@
   .dropdown-menu:focus + ul {
     display: flex;
     flex-direction: column;
-    top: 11vw;
+    top: calc(56px + 2em);
   }
   .dropdown-menu + ul li {
     border-bottom: 1px solid white;
@@ -71,7 +82,7 @@
 
 @media (min-width: 769px) {
   body > header {
-    padding: 1vw 30px;
+    padding: 1em 30px;
   }
   #logo-wrapper {
     order: 0;
@@ -88,9 +99,8 @@
   }
   .dropdown-menu:focus + ul {
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    top: 9vw;
+    top: calc(81px + 2em);
   }
   .product {
     margin: 60px;
@@ -123,19 +133,17 @@ body input[type="button"] {
   position: fixed;
   right: 0;
   top: 50%;
+  z-index: 1;
   padding: 1em 0.5em;
   border-bottom-left-radius: 3px;
   border-top-left-radius: 3px;
   background-color: rgba(95, 108, 118, 0.8);
-}
-#top-nav a {
   color: white;
 }
 
 /* BEGIN HEADER */
 body > header {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #ddd;
@@ -151,7 +159,6 @@ body > header {
 
 #search {
   display: flex;
-  flex-direction: row;
   border: 1px solid LightGray;
 }
 #search input[name="search-input"] {
@@ -169,8 +176,9 @@ body > header {
   border: none;
 }
 
-body > header nav li {
+body > header > nav > ul > li {
   display: inline;
+  padding: 1em;
 }
 
 .dropdown-menu:focus {
@@ -181,12 +189,13 @@ body > header nav li {
   position: absolute;
   right: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
   background-color: #5f6c76;
   text-align: center;
+  list-style: none;
 }
 .dropdown-menu + ul li {
-  padding: 2vw 1vw;
+  padding: 1em 0.5em;
 }
 .dropdown-menu + ul a {
   color: white;
@@ -202,7 +211,6 @@ main {
 
 #products {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 }
