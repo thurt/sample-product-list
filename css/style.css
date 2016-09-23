@@ -1,34 +1,3 @@
-/*
-   color swatch
-
-   orange:
-    rgba 246, 106, 2
-    #f66a02 - gradient light
-    #f57b20 - gradient dark
-
-   header search box bg:
-    f0f0f0
-
-
-  light grey border around products:
-    dddddd
-
-  grey text in products:
-   545454
-
-  red price text:
-    c80000
-
-  search button bg:
-    5f6c76
-
-  main bg:
-    f0f0f0
-
-  footer text color:
-    f57b20
-
-*/
 @media (max-width: 512px) {
   #logo-wrapper {
     height: 35px !important;
@@ -134,6 +103,7 @@ body {
 }
 body a {
   text-decoration: none;
+  color: #545454;
 }
 body a:visited {
   color: #545454;
@@ -153,7 +123,7 @@ body input[type="button"] {
   color: white;
 }
 
-/* BEGIN HEADER */
+/* HEADER */
 body > header {
   display: flex;
   align-items: center;
@@ -212,7 +182,7 @@ body > header > nav > ul > li {
   color: white;
 }
 
-/* BEGIN MAIN */
+/* MAIN */
 main {
   display: flex;
   flex-direction: column;
@@ -283,7 +253,7 @@ main input[name="view-more"] {
   text-shadow: 0px 1px 2px #424242;
 }
 
-/* BEGIN FOOTER */
+/* FOOTER */
 body > footer {
   display: flex;
   flex-direction: column;
